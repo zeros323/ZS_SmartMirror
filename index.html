@@ -163,14 +163,14 @@
 		<div class="weather">
 			<!-- div id="weather-sidebar" class="fade" ng-show="focus == 'default'"></div-->
 			<div>
-				<div class="weather-today" ng-show="focus == 'default'">
+				<div class="weather-today" ng-show="focus == 'weather'">
 					<div id="titleWeather">
 						<span>오늘/이번주 날씨</span><br>
 					</div>
 					<span class="icon dimmed wi {{currentForcast.wi}}"></span> 
 					<span class="tempreture">{{currentForcast.temperature}}&deg;</span>
 				</div>
-				<div class="weather-week-descriptor fade" ng-show="focus == 'default'">
+				<div class="weather-week-descriptor fade" ng-show="focus == 'weather'">
 					<div class="weather-week-descriptor">
 						<!-- UI를 위해 생략
 	              <span>{{hourlyForcast.summary}}</span>
