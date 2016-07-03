@@ -122,9 +122,6 @@
 	  });
 	</script>
 	
-	<!-- 슬라이드쇼구현 -->
-	<!-- script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script-->
-	<script src="http://malsup.github.com/jquery.cycle2.js"></script>
 
 <!-- Styles and Resources -->
 <link rel="shortcut icon" href="favicon.ico" />
@@ -138,6 +135,7 @@
 </head>
 <body ng-controller="MirrorCtrl as commands">
 	<div class="top">
+	<button ng-click="focus = (focus == 'debug')?'default':'debug'">debug</button>
 		<div class="top-left">
 			<div class="date grey">{{date | date : 'EEEE, MMMM d yyyy'}}</div>
 			<div class="time">{{date | date : 'hh:mm:ss a'}}</div>
@@ -236,7 +234,8 @@
 			</div>
 
 			<!-- 슬라이드쇼구현 -->
-			<div id="post_content" class="cycle-slideshow" ng-show="focus == 'slideshowfamilyphoto'">
+			<script src="http://malsup.github.com/jquery.cycle2.js"></script>
+				<div id="post_content" class="cycle-slideshow animate-grow" ng-show="focus == 'slideshowfamilyphoto'">
 			</div>
 
 			<!-- <div class="listening" ng-show="listening">Ready: {{focus}}</div> -->
@@ -349,8 +348,7 @@
 		<button ng-click="focus = (focus == 'commands')?'default':'commands'">Commands</button>
 		<button id="news" ng-click="focus = (focus == 'news')?'default':'news'">News</button>
 		<button ng-click="debug = false">Close Debug</button>
-		<button ng-click="focus = (focus == 'slideshowfamilyphoto')?'default':'slideshowfamilyphoto';" >slideshowFamilyPhoto</button>
-		
+		<button ng-click="focus = (focus == 'slideshowfamilyphoto')?'default':'slideshowfamilyphoto';commands.slideshowFamilyPhoto()" >가족사진</button>
 		<!-- Has results -->
 		<div ng-show="commands.results.length > 0">
 			<button class="btn btn-default" ng-click="commands.clearResults()">Clear</button>
