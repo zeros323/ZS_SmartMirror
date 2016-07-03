@@ -21,7 +21,7 @@
         var VIDEO_INDEX=0;
         $scope.listening = false;
         $scope.complement = command.hi;
-        $scope.debug = true;
+        $scope.debug = false;
         $scope.focus = "default";
         $scope.greetingHidden = "true";
         $scope.user = {};
